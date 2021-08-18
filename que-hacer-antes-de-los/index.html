@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lo que un gay debe hacer antes de los 20´s, 30´s y 40´s </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- FONTS AND ICONS -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- PAGE STUFF -->
+    <div v-cloak id="app">
+        <div class="abs-center container">
+            <div :class="['view-shift', 'view'+current_view]">
+                <div class="view list-view">
+                    <div class="button right" @click="list_entry = true">
+                        <i class="material-icons abs-center">add</i>
+                    </div>
+                    <div class="rela-block header">
+                        <div class="abs-center header-title">Lo que debes hacer ...</div>
+                    </div>
+                    <div class="rela-block item-container list-container">
+                        <div v-if="lists.length === 0">
+                            <center>
+                                <span id="Typing-name">
+
+
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+                                <style>
+                                    .bodyfirma {
+                                        display: grid;
+                                        place-items: center;
+                                        min-height: 100vh;
+                                        text-align: center;
+                                    }
+                                    
+                                    .type-animation {
+                                        display: inline-flex;
+                                        width: 0;
+                                        overflow: hidden;
+                                        padding-right: 0.03em;
+                                        position: relative;
+                                        color: rgba(0, 0, 0, 0.788);
+                                    }
+                                    
+                                    .type-animation:after {
+                                        content: "";
+                                        position: absolute;
+                                        right: 0;
+                                        top: -0.02em;
+                                        bottom: -0.02em;
+                                        width: 0.06em;
+                                        border-right: 2px solid transparent;
+                                    }
+                                    
+                                    .type-animation.animating {
+                                        -webkit-animation: type 1620ms;
+                                        animation: type 1620ms;
+                                        -webkit-animation-fill-mode: forwards;
+                                        animation-fill-mode: forwards;
+                                        -webkit-animation-delay: 1s;
+                                        animation-delay: 1s;
+                                    }
+                                    
+                                    .type-animation.animating:after {
+                                        -webkit-animation: cursor 320ms 8.625 ease-in-out;
+                                        animation: cursor 320ms 8.625 ease-in-out;
+                                    }
+                                    
+                                    @-webkit-keyframes cursor {
+                                        0%,
+                                        100% {
+                                            border-color: #f7f3ff;
+                                        }
+                                        50% {
+                                            border-color: #241b5b;
+                                        }
+                                        100% {
+                                            width: 0;
+                                        }
+                                    }
+                                    
+                                    @keyframes cursor {
+                                        0%,
+                                        100% {
+                                            border-color: #f7f3ff;
+                                        }
+                                        50% {
+                                            border-color: #241b5b;
+                                        }
+                                        100% {
+                                            width: 0;
+                                        }
+                                    }
+                                    
+                                    @-webkit-keyframes type {
+                                        11.1111111111% {
+                                            width: 0.49em;
+                                        }
+                                        22.2222222222% {
+                                            width: 0.98em;
+                                        }
+                                        33.3333333333% {
+                                            width: 1.47em;
+                                        }
+                                        44.4444444444% {
+                                            width: 1.96em;
+                                        }
+                                        55.5555555556% {
+                                            width: 2.45em;
+                                        }
+                                        66.6666666667% {
+                                            width: 2.94em;
+                                        }
+                                        77.7777777778% {
+                                            width: 3.43em;
+                                        }
+                                        88.8888888889% {
+                                            width: 3.92em;
+                                        }
+                                        100% {
+                                            width: 3.92em;
+                                            padding-right: 0;
+                                        }
+                                    }
+                                    
+                                    @keyframes type {
+                                        11.1111111111% {
+                                            width: 0.49em;
+                                        }
+                                        22.2222222222% {
+                                            width: 0.98em;
+                                        }
+                                        33.3333333333% {
+                                            width: 1.47em;
+                                        }
+                                        44.4444444444% {
+                                            width: 1.96em;
+                                        }
+                                        55.5555555556% {
+                                            width: 2.45em;
+                                        }
+                                        66.6666666667% {
+                                            width: 2.94em;
+                                        }
+                                        77.7777777778% {
+                                            width: 3.43em;
+                                        }
+                                        88.8888888889% {
+                                            width: 3.92em;
+                                        }
+                                        100% {
+                                            width: 3.30em;
+                                            padding-right: 0;
+                                        }
+                                    }
+                                </style>
+
+                                <div class="bodyfirma">
+                                    <h1>Luis <span class="type-animation animating"><b>Ángel </b></span>Maciel</h1>
+                        </div>
+
+                        </span>
+                        </center>
+                    </div>
+                    <div v-else class="horz-center lite" style="top: 28px">
+                        ¿Cómo va esa lista?</div>
+                    <div v-for="list,index in lists" :class="['rela-inline', 'list']" @click="if(!list_entry){current_list=index; current_view = 2; snackbar_active = false;}" :key="index">
+                        <div class="list-title">{{list.title}}</div>
+                        <i class="material-icons item-remove list-remove" @click.stop="remove_list_snack(index)">clear</i>
+                    </div>
+                </div>
+                <div :class="['horz-center', 'list-input', list_entry?'active':'']">
+                    <input type="text" class="input" placeholder="Agregar nueva lista" v-model="new_list" @keypress.enter="add_list()" />
+                    <i class="vert-center material-icons item-icon" @click="list_entry = false; new_list = '';">clear</i>
+                </div>
+            </div>
+            <div class="view task-view">
+                <div class="rela-block header">
+                    <div class="list-header">{{(lists[current_list])?(lists[current_list].title):('placeholder')}}</div>
+                </div>
+                <div class="button right" @click="current_view = 3;">
+                    <i class="material-icons abs-center">add</i>
+                </div>
+                <div class="button left" @click="current_view = 1;">
+                    <i class="material-icons abs-center">navigate_before</i>
+                </div>
+                <div v-if="lists[current_list]" class="rela-block item-container task-container">
+                    <div v-if="!num_tasks" class="lite" style="text-align: center">No tienes actividades por el momento. ¡Venga, grega una!</div>
+                    <div v-for="task,index in lists[current_list].tasks" :class="['rela-block', 'task', task.complete?'complete':'', task.deleted?'left':'']" :key="index">
+                        <i class="vert-center material-icons item-icon item-checkbox" v-show="!task.complete" @click.stop="task.complete = !task.complete">check_box_outline_blank</i>
+                        <i class="vert-center material-icons item-icon item-checkbox" v-show="task.complete" @click.stop="task.complete = !task.complete">check_box</i>
+                        <i class="vert-center material-icons item-icon item-remove task-remove" @click="remove_task(index); snack_view = 1;">clear</i>
+                        <div class="rela-inline item-text">{{task.title}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="view entry-view">
+                <div class="button left" @click="current_view = 2; reset_variables();">
+                    <i class="material-icons abs-center">navigate_before</i>
+                </div>
+                <input type="text" placeholder="Agregar titulo" class="rela-block input entry-field title-input" v-model="new_title" />
+                <textarea type="text" placeholder="Descripción (opcional)" class="rela-block input entry-field desc-input" v-model="new_desc" rows="8"></textarea>
+                <div v-show="cost_entry" class="rela-inline entry-box">
+                    <span class="rela-inline">$ </span>
+                    <input type="text" class="rela-inline input entry-field cost-input" v-model="new_cost" />
+                </div>
+                <div v-show="time_entry" class="rela-inline entry-box">
+                    <input type="text" placeholder="Fecha" class="rela-inline input entry-field time-input" v-model="new_time" />
+                </div>
+                <div class="entry-option-container">
+                    <div class="rela-inline entry-option right" @click="add_task()"><i class="material-icons">done</i></div>
+                    <!-- Por el momento ocultas    <div class="rela-inline entry-option" @click="time_entry = !time_entry"><i class="material-icons">schedule</i></div>
+                        <div class="rela-inline entry-option" @click="cost_entry = !cost_entry"><i class="material-icons">attach_money</i></div> -->
+                </div>
+            </div>
+        </div>
+        <div :class="['snack-bar', snackbar_active?'active':'']">
+            <div v-show="!snack_view" class="snack-content list-remove">
+                <div class="rela-inline snack-bar-text">¿Seguro que quieres eliminar?</div>
+                <div class="rela-inline action" @click="snackbar_active = false">CANCELAR</div>
+                <div class="rela-inline action yellow" @click="remove_list()">OK</div>
+
+            </div>
+            <div v-show="snack_view" class="snack-content task-remove">
+                <div class="rela-inline snack-bar-text">Eliminado</div>
+                <div class="rela-inline action yellow" @click="undo_remove_task()">Deshacer</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
